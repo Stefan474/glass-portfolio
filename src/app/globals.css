@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
   :root {
 
@@ -107,9 +105,11 @@
 
     --chart-5: 340 75% 55%
   }
+  .theme {
+
+    --animate-rippling: rippling var(--duration) ease-out
+  }
 }
-
-
 
 @layer base {
   * {
@@ -117,5 +117,17 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@theme inline {
+  @keyframes rippling {
+  0% {
+    opacity: 1;
+    }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+    }
   }
 }

@@ -1,6 +1,9 @@
 "use client";
 
 import * as motion from "motion/react-client";
+import Bio from "./grid-components/Bio";
+import TechStack from "./grid-components/TechStack";
+import Avatar from "./grid-components/Avatar";
 
 const parent = {
   animate: {
@@ -35,14 +38,18 @@ export default function MainGrid() {
         {/* 1 ▸ Intro card */}
         <motion.div
           variants={child}
-          className="col-start-1 col-span-5 row-start-1 row-span-5 rounded-lg bg-neutral-800/60"
-        />
+          className="col-start-1 col-span-5 row-start-1 row-span-5 "
+        >
+          <Bio />
+        </motion.div>
 
         {/* 2 ▸ Tech-stack card */}
         <motion.div
           variants={child}
-          className="col-start-1 col-span-5 row-start-6 row-span-4 rounded-lg bg-neutral-800/60"
-        />
+          className="col-start-1 col-span-5 row-start-6 row-span-4 rounded-lg bg-neutral-800/60 p-4"
+        >
+          <TechStack />
+        </motion.div>
 
         {/* 3 ▸ Language bar */}
         <motion.div
@@ -78,7 +85,10 @@ export default function MainGrid() {
         <motion.div
           variants={child}
           className="col-start-6 col-span-4 row-start-1 row-span-10 rounded-lg bg-neutral-700/60"
-        />
+        >
+          {" "}
+          <Avatar />
+        </motion.div>
 
         {/* 9 ▸ Sidebar / nav */}
         <motion.div
