@@ -4,6 +4,8 @@ import * as motion from "motion/react-client";
 import Bio from "./grid-components/Bio";
 import TechStack from "./grid-components/TechStack";
 import Avatar from "./grid-components/Avatar";
+import MainMenu from "./grid-components/MainMenu";
+import Image from "next/image";
 
 const parent = {
   animate: {
@@ -72,28 +74,48 @@ export default function MainGrid() {
         {/* 6 ▸ LinkedIn tile */}
         <motion.div
           variants={child}
-          className="col-start-6 col-span-2 row-start-11 row-span-2 rounded-lg bg-neutral-700/60"
-        />
+          className="col-start-6 col-span-2 row-start-11 row-span-2 rounded-lg bg-white/80 flex justify-center items-center"
+        >
+          <Image
+            src="/assets/tech_images/LinkedIn.png"
+            alt="linkedin"
+            width={60}
+            height={60}
+          />
+        </motion.div>
 
         {/* 7 ▸ GitHub tile */}
         <motion.div
           variants={child}
-          className="col-start-8 col-span-2 row-start-11 row-span-2 rounded-lg bg-neutral-700/60"
-        />
+          className="col-start-8 col-span-2 row-start-11 row-span-2 rounded-lg bg-cyan-400/80 flex justify-center items-center"
+        >
+          {" "}
+          <Image
+            src="/assets/tech_images/GitHub.png"
+            alt="github"
+            width={60}
+            height={60}
+          />
+        </motion.div>
 
         {/* 8 ▸ Avatar */}
         <motion.div
           variants={child}
-          className="col-start-6 col-span-4 row-start-1 row-span-10 rounded-lg bg-neutral-700/60"
+          className="col-start-6 col-span-4 row-start-1 row-span-10 rounded-lg bg-neutral-900/60"
         >
-          {" "}
           <Avatar />
         </motion.div>
 
         {/* 9 ▸ Sidebar / nav */}
         <motion.div
           variants={child}
-          className="col-start-10 col-span-3 row-start-1 row-span-11 rounded-lg bg-neutral-800/60"
+          className="col-start-10 col-span-3 row-start-1 row-span-6 rounded-lg bg-neutral-600/60"
+        >
+          <MainMenu />
+        </motion.div>
+        <motion.div
+          variants={child}
+          className="col-start-10 col-span-3 row-start-7 row-span-5 rounded-lg bg-neutral-700/60"
         />
 
         {/* 10 ▸ Location bar */}
